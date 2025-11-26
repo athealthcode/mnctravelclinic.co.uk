@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Vaccinations - MNC Travel Clinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: [],
+      theme: {
+        extend: {
+          fontFamily: {
+            instrument_sans: ['Instrument Sans', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Instrument Sans';
+      src: url('https://mnctravelclinic.co.uk/wp-content/themes/hevor/assets/fonts/instrument-sans_normal_400.ttf') format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Instrument Sans';
+      src: url('https://mnctravelclinic.co.uk/wp-content/themes/hevor/assets/fonts/instrument-sans_normal_600.ttf') format("truetype");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .world-map-bg {
+      background-image: url('data:image/svg+xml,%3Csvg width="1200" height="600" xmlns="http://www.w3.org/2000/svg"%3E%3Cg opacity="0.03"%3E%3Cpath d="M100,200 Q200,150 300,200 T500,200" stroke="%23000" fill="none" stroke-width="1" stroke-dasharray="5,5"/%3E%3Cpath d="M200,300 Q300,250 400,300 T600,300" stroke="%23000" fill="none" stroke-width="1" stroke-dasharray="5,5"/%3E%3Cpath d="M300,150 Q400,100 500,150 T700,150" stroke="%23000" fill="none" stroke-width="1" stroke-dasharray="5,5"/%3E%3Ccircle cx="150" cy="220" r="3" fill="%23000"/%3E%3Ccircle cx="350" cy="180" r="3" fill="%23000"/%3E%3Ccircle cx="550" cy="220" r="3" fill="%23000"/%3E%3C/g%3E%3C/svg%3E');
+      background-size: cover;
+      background-position: center;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .stagger-1 { animation-delay: 0s; }
+    .stagger-2 { animation-delay: 0.1s; }
+    .stagger-3 { animation-delay: 0.2s; }
+
+    .grain-texture {
+      background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="2" numOctaves="3" /%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+      opacity: 0.03;
+    }
+
+    .sticky-booking-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 50;
+    }
+
+    .sticky-booking-bar.visible {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-instrument_sans antialiased">
+
+<!-- Hero Section -->
+<div class="relative overflow-hidden bg-gradient-to-br from-white via-stone-50 to-stone-100 min-h-[90vh] flex items-center world-map-bg">
+  
+  <!-- Grain texture -->
+  <div class="absolute inset-0 grain-texture pointer-events-none"></div>
+
+  <div class="relative max-w-[1400px] mx-auto px-6 md:px-12 py-20 w-full">
+    <div class="text-center max-w-5xl mx-auto">
+      
+      <!-- Headline -->
+      <h1 class="mb-8">
+        <div class="text-slate-900 text-[clamp(3rem,7vw,6rem)] font-bold leading-[1] tracking-[-0.02em] mb-4">
+          Travel
+        </div>
+        <div class="text-[clamp(3rem,7vw,6rem)] font-bold leading-[1] tracking-[-0.02em]">
+          <span class="inline-block bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">Vaccinations</span>
+        </div>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-slate-700 text-2xl md:text-3xl leading-[1.4] font-light mb-12 max-w-3xl mx-auto">
+        Expert advice. Same-day appointments. Certificates provided.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="#check-vaccines" class="group inline-flex items-center justify-center gap-3 px-9 py-5 text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+          <span>Check What Vaccines You Need</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+        <a href="#book" class="group inline-flex items-center justify-center gap-3 px-9 py-5 text-lg font-semibold text-slate-900 glassmorphism rounded-2xl hover:bg-white/80 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
+          <span>Book Appointment</span>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust Pills -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="inline-flex items-center gap-2 px-6 py-3 glassmorphism text-slate-700 text-sm font-semibold rounded-full shadow-lg shadow-emerald-500/10">
+          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Yellow Fever Centre
+        </div>
+        <div class="inline-flex items-center gap-2 px-6 py-3 glassmorphism text-slate-700 text-sm font-semibold rounded-full shadow-lg shadow-teal-500/10">
+          <svg class="w-4 h-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+          </svg>
+          Price Match Guarantee
+        </div>
+        <div class="inline-flex items-center gap-2 px-6 py-3 glassmorphism text-slate-700 text-sm font-semibold rounded-full shadow-lg shadow-emerald-500/10">
+          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          Denton & Wythenshawe
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="relative py-24 bg-gradient-to-b from-stone-100 to-white">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+    
+    <h2 class="text-slate-900 text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">
+      Book in 3 Simple Steps
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      
+      <!-- Connecting line -->
+      <div class="hidden md:block absolute top-24 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-emerald-200 via-teal-200 to-emerald-200"></div>
+
+      <!-- Step 1 -->
+      <div class="relative glassmorphism rounded-3xl p-10 shadow-xl shadow-emerald-500/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2 transition-all duration-500 float-animation stagger-1">
+        <div class="absolute -top-6 left-10 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-emerald-500/50">
+          1
+        </div>
+        <div class="mb-6 mt-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-slate-900 text-2xl font-bold mb-3">Check Your Destination</h3>
+          <p class="text-slate-600 text-lg leading-relaxed">We'll tell you exactly what you need</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative glassmorphism rounded-3xl p-10 shadow-xl shadow-teal-500/10 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-2 transition-all duration-500 float-animation stagger-2 md:mt-8">
+        <div class="absolute -top-6 left-10 w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-teal-500/50">
+          2
+        </div>
+        <div class="mb-6 mt-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-slate-900 text-2xl font-bold mb-3">Book Your Slot</h3>
+          <p class="text-slate-600 text-lg leading-relaxed">Same-day appointments available</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative glassmorphism rounded-3xl p-10 shadow-xl shadow-emerald-500/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2 transition-all duration-500 float-animation stagger-3 md:mt-16">
+        <div class="absolute -top-6 left-10 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-emerald-500/50">
+          3
+        </div>
+        <div class="mb-6 mt-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-slate-900 text-2xl font-bold mb-3">Get Protected</h3>
+          <p class="text-slate-600 text-lg leading-relaxed">Walk out with your vaccines and certificates</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Vaccination Categories Section -->
+<div class="relative py-24 bg-white">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+    
+    <h2 class="text-center mb-12">
+      <span class="text-slate-900 text-5xl md:text-6xl font-bold tracking-tight">Our </span>
+      <span class="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">Vaccinations</span>
+    </h2>
+
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-16">
+      <button class="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+        All
+      </button>
+      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
+        Essential Travel
+      </button>
+      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
+        Destination-Specific
+      </button>
+      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
+        Pilgrimage
+      </button>
+      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
+        Malaria
+      </button>
+    </div>
+
+    <!-- Vaccine Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Vaccine Card 1 -->
+      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-slate-900 text-2xl font-bold">Yellow Fever</h3>
+          <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">Essential</span>
+        </div>
+        <div class="mb-6">
+          <div class="text-slate-900 text-4xl font-bold mb-2">£75</div>
+          <p class="text-slate-600 text-sm">Single dose • Lifetime protection</p>
+        </div>
+        <button class="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Vaccine Card 2 -->
+      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-slate-900 text-2xl font-bold">Hepatitis A</h3>
+          <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">Travel</span>
+        </div>
+        <div class="mb-6">
+          <div class="text-slate-900 text-4xl font-bold mb-2">£60</div>
+          <p class="text-slate-600 text-sm">2 doses • 25 years protection</p>
+        </div>
+        <button class="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Vaccine Card 3 -->
+      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-slate-900 text-2xl font-bold">Typhoid</h3>
+          <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">Travel</span>
+        </div>
+        <div class="mb-6">
+          <div class="text-slate-900 text-4xl font-bold mb-2">£45</div>
+          <p class="text-slate-600 text-sm">Single dose • 3 years protection</p>
+        </div>
+        <button class="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Vaccine Card 4 -->
+      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-slate-900 text-2xl font-bold">Rabies</h3>
+          <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full">Specialist</span>
+        </div>
+        <div class="mb-6">
+          <div class="text-slate-900 text-4xl font-bold mb-2">£70</div>
+          <p class="text-slate-600 text-sm">3 doses • Pre-exposure course</p>
+        </div>
+        <button class="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Vaccine Card 5 -->
+      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-slate-900 text-2xl font-bold">Japanese Encephalitis</h3>
+          <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">Asia</span>
+        </div>
+        <div class="mb-6">
+          <div class="text-slate-900 text-4xl font-bold mb-2">£95</div>
+          <p class="text-slate-600 text-sm">2 doses • Long-term protection</p>
+        </div>
+        <button class="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Vaccine Card 6 -->
+      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-slate-900 text-2xl font-bold">Meningitis ACWY</h3>
+          <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Pilgrimage</span>
+        </div>
+        <div class="mb-6">
+          <div class="text-slate-900 text-4xl font-bold mb-2">£55</div>
+          <p class="text-slate-600 text-sm">Single dose • Required for Hajj</p>
+        </div>
+        <button class="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Book Now
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Locations Section -->
+<div class="relative py-24 bg-gradient-to-b from-white to-stone-100">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+    
+    <h2 class="text-slate-900 text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">
+      Our Clinics
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Denton Clinic -->
+      <div class="glassmorphism rounded-3xl p-10 shadow-xl shadow-emerald-500/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/50">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-slate-900 text-2xl font-bold mb-2">Denton Clinic</h3>
+            <p class="text-slate-600 text-base leading-relaxed">
+              123 Manchester Road<br/>
+              Denton, Manchester<br/>
+              M34 3RE
+            </p>
+          </div>
+        </div>
+        <div class="mb-6 p-4 bg-white/50 rounded-xl">
+          <h4 class="text-slate-900 font-semibold mb-2">Opening Hours</h4>
+          <p class="text-slate-600 text-sm">Monday - Friday: 9:00am - 6:00pm</p>
+        </div>
+        <button class="w-full px-6 py-3 glassmorphism text-slate-900 font-semibold rounded-xl hover:bg-white/80 transition-all duration-300 shadow-lg">
+          Get Directions
+        </button>
+      </div>
+
+      <!-- Wythenshawe Clinic -->
+      <div class="glassmorphism rounded-3xl p-10 shadow-xl shadow-teal-500/10 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-2 transition-all duration-500">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-teal-500/50">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-slate-900 text-2xl font-bold mb-2">Wythenshawe Clinic</h3>
+            <p class="text-slate-600 text-base leading-relaxed">
+              456 Civic Centre Road<br/>
+              Wythenshawe, Manchester<br/>
+              M22 5RX
+            </p>
+          </div>
+        </div>
+        <div class="mb-6 p-4 bg-white/50 rounded-xl">
+          <h4 class="text-slate-900 font-semibold mb-2">Opening Hours</h4>
+          <p class="text-slate-600 text-sm">Monday - Friday: 9:00am - 6:00pm</p>
+        </div>
+        <button class="w-full px-6 py-3 glassmorphism text-slate-900 font-semibold rounded-xl hover:bg-white/80 transition-all duration-300 shadow-lg">
+          Get Directions
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer CTA -->
+<div class="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 py-24">
+  
+  <!-- Decorative elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+    <div class="absolute bottom-10 right-10 w-40 h-40 border-4 border-white rounded-full"></div>
+    <div class="absolute top-1/2 left-1/3 w-24 h-24 border-4 border-white rounded-full"></div>
+  </div>
+
+  <div class="relative max-w-[1400px] mx-auto px-6 md:px-12 text-center">
+    
+    <h2 class="text-white text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+      Not Sure What You Need?
+    </h2>
+    
+    <p class="text-white/90 text-2xl md:text-3xl leading-[1.4] font-light mb-12 max-w-3xl mx-auto">
+      Use our free tool to check which vaccinations are required for your destination.
+    </p>
+
+    <a href="#check-tool" class="group inline-flex items-center justify-center gap-3 px-12 py-6 text-xl font-semibold text-emerald-600 bg-white rounded-2xl hover:bg-stone-50 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1">
+      <span>Check Now</span>
+      <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+      </svg>
+    </a>
+
+  </div>
+</div>
+
+<!-- Sticky Booking Bar -->
+<div class="sticky-booking-bar glassmorphism py-4 shadow-2xl" id="stickyBar">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between gap-4 flex-wrap">
+    <div class="flex items-center gap-4">
+      <span class="text-slate-900 text-lg font-semibold">Ready to book?</span>
+      <a href="tel:01615377102" class="text-emerald-600 text-lg font-bold hover:text-emerald-700 transition-colors">
+        0161 537 7102
+      </a>
+    </div>
+    <a href="#book" class="inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg">
+      <span>Book Appointment</span>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  // Sticky booking bar functionality
+  window.addEventListener('scroll', function() {
+    const stickyBar = document.getElementById('stickyBar');
+    if (window.scrollY > 800) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>
