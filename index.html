@@ -3,236 +3,995 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Vaccinations - MNC Travel Clinic</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      content: [],
-      theme: {
-        extend: {
-          fontFamily: {
-            instrument_sans: ['Instrument Sans', 'sans-serif']
-          }
-        }
+  <title>MNC Travel Clinic</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+  content: [],
+  theme: {
+    extend: {
+      fontFamily: {
+        dm_sans: [
+          'DM Sans',
+          'sans-serif'
+        ],
+        playfair_display: [
+          'Playfair Display',
+          'Georgia',
+          'serif'
+        ],
+        font_awesome_6_free: [
+          'Font Awesome 6 Free'
+        ],
+        font_awesome_6_brands: [
+          'Font Awesome 6 Brands'
+        ]
       }
-    };
-  </script>
+    }
+  }
+};
+</script>
 
   <style>
     @font-face {
-      font-family: 'Instrument Sans';
-      src: url('https://mnctravelclinic.co.uk/wp-content/themes/hevor/assets/fonts/instrument-sans_normal_400.ttf') format("truetype");
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 6 Brands';
       font-weight: 400;
       font-style: normal;
     }
+  </style>
+
+  <style>
     @font-face {
-      font-family: 'Instrument Sans';
-      src: url('https://mnctravelclinic.co.uk/wp-content/themes/hevor/assets/fonts/instrument-sans_normal_600.ttf') format("truetype");
-      font-weight: 600;
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
       font-style: normal;
     }
+  </style>
 
-    .glassmorphism {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 5 Brands';
+      font-weight: 400;
+      font-style: normal;
     }
+  </style>
 
-    .world-map-bg {
-      background-image: url('data:image/svg+xml,%3Csvg width="1200" height="600" xmlns="http://www.w3.org/2000/svg"%3E%3Cg opacity="0.03"%3E%3Cpath d="M100,200 Q200,150 300,200 T500,200" stroke="%23000" fill="none" stroke-width="1" stroke-dasharray="5,5"/%3E%3Cpath d="M200,300 Q300,250 400,300 T600,300" stroke="%23000" fill="none" stroke-width="1" stroke-dasharray="5,5"/%3E%3Cpath d="M300,150 Q400,100 500,150 T700,150" stroke="%23000" fill="none" stroke-width="1" stroke-dasharray="5,5"/%3E%3Ccircle cx="150" cy="220" r="3" fill="%23000"/%3E%3Ccircle cx="350" cy="180" r="3" fill="%23000"/%3E%3Ccircle cx="550" cy="220" r="3" fill="%23000"/%3E%3C/g%3E%3C/svg%3E');
-      background-size: cover;
-      background-position: center;
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-style: normal;
     }
+  </style>
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      font-style: normal;
     }
+  </style>
 
-    .float-animation {
-      animation: float 6s ease-in-out infinite;
+  <style>
+    @font-face {
+      /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      font-style: normal;
     }
+  </style>
 
-    .stagger-1 { animation-delay: 0s; }
-    .stagger-2 { animation-delay: 0.1s; }
-    .stagger-3 { animation-delay: 0.2s; }
+  <style>
+    @font-face {
+      font-family: 'Playfair Display';
+      src: url('https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2') format("woff2");
+      font-weight: 400 800;
+      font-style: normal;
+    }
+  </style>
 
-    .grain-texture {
-      background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="2" numOctaves="3" /%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
-      opacity: 0.03;
+  <style>
+    @font-face {
+      font-family: 'DM Sans';
+      src: url('https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2') format("woff2");
+      font-weight: normal;
+      font-style: normal;
     }
   </style>
 </head>
-<body class="font-instrument_sans antialiased">
-
-<!-- Hero Section -->
-<div class="relative overflow-hidden bg-gradient-to-br from-white via-stone-50 to-stone-100 min-h-[90vh] flex items-center world-map-bg">
-  
-  <!-- Grain texture -->
-  <div class="absolute inset-0 grain-texture pointer-events-none"></div>
-
-  <div class="relative max-w-[1400px] mx-auto px-6 md:px-12 py-20 w-full">
-    <div class="text-center max-w-5xl mx-auto">
-      
-      <!-- Headline -->
-      <h1 class="mb-8">
-        <div class="text-slate-900 text-[clamp(3rem,7vw,6rem)] font-bold leading-[1] tracking-[-0.02em] mb-4">
-          Travel
-        </div>
-        <div class="text-[clamp(3rem,7vw,6rem)] font-bold leading-[1] tracking-[-0.02em]">
-          <span class="inline-block bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">Vaccinations</span>
-        </div>
-      </h1>
-
-      <!-- Subheadline -->
-      <p class="text-slate-700 text-2xl md:text-3xl leading-[1.4] font-light mb-12 max-w-3xl mx-auto">
-        Expert advice. Same-day appointments. Certificates provided.
+<body class="text-slate-900 text-base not-italic normal-nums font-normal accent-auto bg-zinc-50 box-border caret-transparent block tracking-[normal] leading-6 list-outside list-disc pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-dm_sans"><div class="fixed bg-[url(data:image/svg+xml,%3Csvg%20viewBox=%270%200%20200%20200%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter%20id=%27noiseFilter%27%3E%3CfeTurbulence%20type=%27fractalNoise%27%20baseFrequency=%270.8%27%20numOctaves=%273%27%20stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect%20width=%27100%25%27%20height=%27100%25%27%20filter=%27url%28%23noiseFilter)] box-border caret-transparent h-full opacity-40 pointer-events-none w-full z-[9999] left-0 top-0"></div>
+<nav class="fixed backdrop-blur-xl bg-white/90 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.05)_0px_1px_2px_0px] box-border caret-transparent z-50 border-gray-100 border-b border-solid top-0 inset-x-0"><div class="items-center box-border caret-transparent flex h-[90px] justify-between max-w-[1680px] mx-auto px-6 md:px-[60px]"><a href="index.html" class="items-center box-border caret-transparent gap-x-5 flex shrink-0 gap-y-5"><h1 class="text-slate-900 text-2xl font-bold box-border caret-transparent tracking-[-0.5px] leading-8 font-playfair_display">
+        MNC Travel Clinic
+       </h1>
+</a>
+<nav class="items-center box-border caret-transparent gap-x-12 hidden min-h-0 min-w-0 gap-y-12 md:flex md:min-h-[auto] md:min-w-[auto]"><a href="#services" class="relative text-slate-600 text-[15px] font-medium box-border caret-transparent inline tracking-[0.375px] leading-[22.5px] min-h-0 min-w-0 md:block md:min-h-[auto] md:min-w-[auto] after:accent-auto after:bg-cyan-600 after:box-border after:caret-transparent after:text-slate-600 after:block after:text-[15px] after:not-italic after:normal-nums after:font-medium after:h-0.5 after:tracking-[0.375px] after:leading-[22.5px] after:list-outside after:list-disc after:pointer-events-auto after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-0 after:border-separate after:left-0 after:-bottom-1 after:font-dm_sans hover:text-cyan-600">
+      Our Services
+     </a>
+<a href="results.html" class="relative text-slate-600 text-[15px] font-medium box-border caret-transparent inline tracking-[0.375px] leading-[22.5px] min-h-0 min-w-0 md:block md:min-h-[auto] md:min-w-[auto] after:accent-auto after:bg-cyan-600 after:box-border after:caret-transparent after:text-slate-600 after:block after:text-[15px] after:not-italic after:normal-nums after:font-medium after:h-0.5 after:tracking-[0.375px] after:leading-[22.5px] after:list-outside after:list-disc after:pointer-events-auto after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-0 after:border-separate after:left-0 after:-bottom-1 after:font-dm_sans hover:text-cyan-600">
+      Patient Reviews
+     </a>
+<a href="#clinicians" class="relative text-slate-600 text-[15px] font-medium box-border caret-transparent inline tracking-[0.375px] leading-[22.5px] min-h-0 min-w-0 md:block md:min-h-[auto] md:min-w-[auto] after:accent-auto after:bg-cyan-600 after:box-border after:caret-transparent after:text-slate-600 after:block after:text-[15px] after:not-italic after:normal-nums after:font-medium after:h-0.5 after:tracking-[0.375px] after:leading-[22.5px] after:list-outside after:list-disc after:pointer-events-auto after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-0 after:border-separate after:left-0 after:-bottom-1 after:font-dm_sans hover:text-cyan-600">
+      Our Clinicians
+     </a>
+<a href="pricing.html" class="relative text-slate-600 text-[15px] font-medium box-border caret-transparent inline tracking-[0.375px] leading-[22.5px] min-h-0 min-w-0 md:block md:min-h-[auto] md:min-w-[auto] after:accent-auto after:bg-cyan-600 after:box-border after:caret-transparent after:text-slate-600 after:block after:text-[15px] after:not-italic after:normal-nums after:font-medium after:h-0.5 after:tracking-[0.375px] after:leading-[22.5px] after:list-outside after:list-disc after:pointer-events-auto after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-0 after:border-separate after:left-0 after:-bottom-1 after:font-dm_sans hover:text-cyan-600">
+      Pricing
+     </a>
+</nav>
+<div class="items-center box-border caret-transparent hidden min-h-0 min-w-0 md:flex md:min-h-[auto] md:min-w-[auto]"><a href="pricing.html" class="text-white text-[15px] font-semibold items-center bg-cyan-500 shadow-[rgba(6,182,212,0.3)_0px_10px_30px_-8px] box-border caret-transparent gap-x-2 flex leading-[22.5px] min-h-0 min-w-0 gap-y-2 px-7 py-3.5 rounded-full transition-all duration-300 md:min-h-[auto] md:min-w-[auto] hover:bg-cyan-600 hover:shadow-[rgba(6,182,212,0.5)_0px_15px_40px_-10px]">
+      Get Started
+     </a>
+</div>
+</div>
+</nav>
+<section class="relative items-center bg-white box-border caret-transparent flex min-h-[1000px] w-full overflow-hidden"><div class="absolute bg-[linear-gradient(to_right,rgb(165,243,252),rgb(34,211,238),rgb(6,182,212))] box-border caret-transparent -z-20 inset-0"></div>
+<div class="absolute bg-cyan-300/40 box-border caret-transparent blur-[200px] h-[800px] opacity-50 pointer-events-none w-[800px] -z-10 rounded-full right-1/4 top-0"></div>
+<div class="absolute bg-sky-200/40 box-border caret-transparent blur-[200px] h-[800px] opacity-50 pointer-events-none w-[800px] -z-10 rounded-full left-1/4 bottom-0"></div>
+<div class="absolute bg-[url(data:image/svg+xml,%3Csvg%20viewBox=%220%200%20200%20200%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter%20id=%22noiseFilter%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.65%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url%28%23noiseFilter)] box-border caret-transparent opacity-[0.015] pointer-events-none -z-10 inset-0"></div>
+<div class="relative box-border caret-transparent max-w-[1680px] z-10 mx-auto px-6 py-32 md:px-[60px]"><div class="items-center box-border caret-transparent gap-x-16 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-16 md:grid-cols-[repeat(2,minmax(0px,1fr))]"><div class="box-border caret-transparent flex flex-col justify-center"><div class="box-border caret-transparent mb-8"><div class="items-center box-border caret-transparent gap-x-4 flex gap-y-4"><div class="relative box-border caret-transparent"><p class="text-cyan-600 text-sm font-bold box-border caret-transparent tracking-[3px] leading-5 uppercase">
+          TRAVEL HEALTH SPECIALISTS
+         </p>
+<div class="bg-cyan-500 box-border caret-transparent h-[2px] w-[60px] mt-3 rounded-full"></div>
+</div>
+</div>
+</div>
+<h1 class="text-slate-700 text-5xl font-bold box-border caret-transparent tracking-[-1.2px] leading-[50.4px] mb-8 font-playfair_display md:text-7xl md:tracking-[-1.8px] md:leading-[75.6px]">
+       Expert Travel Vaccinations Across
+       <br class="text-5xl box-border caret-transparent tracking-[-1.2px] leading-[50.4px] md:text-7xl md:tracking-[-1.8px] md:leading-[75.6px]" />
+<span class="text-cyan-500 text-5xl box-border inline-block tracking-[-1.2px] leading-[50.4px] pr-4 md:text-7xl md:tracking-[-1.8px] md:leading-[75.6px]">
+        Cheshire &amp;
+        <i class="text-5xl italic box-border tracking-[-1.2px] leading-[50.4px] md:text-7xl md:tracking-[-1.8px] md:leading-[75.6px]">
+         South Manchester
+        </i>
+</span>
+</h1>
+<p class="text-slate-600 text-lg font-light box-border caret-transparent leading-[32px] max-w-[600px] mb-12 tracking-[0.01em] transition-all duration-300 md:text-[22px] md:leading-[38px] hover-glow-paragraph" style="animation: fade-in-up 0.8s ease-out 0.3s both;">
+        From vaccinations to malaria prevention, our specialist travel clinics ensure you're <span class="relative inline-block text-transparent font-semibold bg-clip-text bg-[linear-gradient(135deg,#06b6d4,#22d3ee)] bg-[length:200%_200%] animate-gradient-shift animated-underline">fully protected</span> for every destination. Trusted by thousands of travelers across <span class="relative inline-block text-transparent font-semibold bg-clip-text bg-[linear-gradient(135deg,#06b6d4,#22d3ee)] bg-[length:200%_200%] animate-gradient-shift animated-underline-location">Cheshire and South Manchester</span>.
       </p>
 
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a href="#check-vaccines" class="group inline-flex items-center justify-center gap-3 px-9 py-5 text-lg font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
-          <span>Check What Vaccines You Need</span>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </a>
-        <a href="#book" class="group inline-flex items-center justify-center gap-3 px-9 py-5 text-lg font-semibold text-slate-900 glassmorphism rounded-2xl hover:bg-white/80 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1">
-          <span>Book Appointment</span>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-          </svg>
-        </a>
+      <style>
+        /* Animated underline for location text */
+        .animated-underline-location::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background: linear-gradient(90deg, #06b6d4, #22d3ee);
+          border-radius: 2px;
+          animation: draw-underline 0.8s ease-out 1.6s forwards;
+        }
+      </style>
+
+      <style>
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes gradient-shift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        @keyframes draw-underline {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+
+        @keyframes glow-pulse-subtle {
+          0%, 100% {
+            text-shadow: 0 0 8px rgba(6, 182, 212, 0);
+          }
+          50% {
+            text-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
+          }
+        }
+
+        .animate-gradient-shift {
+          animation: gradient-shift 3s ease infinite;
+        }
+
+        /* Animated underline that draws in */
+        .animated-underline::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background: linear-gradient(90deg, #06b6d4, #22d3ee);
+          border-radius: 2px;
+          animation: draw-underline 0.8s ease-out 1.2s forwards;
+        }
+
+        /* Hover glow effect on entire paragraph */
+        .hover-glow-paragraph:hover .animated-underline {
+          animation: gradient-shift 3s ease infinite, glow-pulse-subtle 2s ease-in-out infinite;
+        }
+
+        /* Subtle brightness increase on hover */
+        .hover-glow-paragraph:hover {
+          filter: brightness(1.05);
+        }
+      </style>
+<div class="box-border caret-transparent gap-x-4 flex flex-col gap-y-4 mb-12 md:flex-row"><button class="text-white text-[17px] font-bold items-center bg-cyan-500 shadow-[rgba(6,182,212,0.25)_0px_8px_24px_-4px] caret-transparent gap-x-3 flex justify-center leading-[25.5px] gap-y-3 text-center px-10 py-4 rounded-2xl transition-all duration-300 hover:shadow-[rgba(6,182,212,0.4)_0px_12px_32px_-4px] hover:bg-cyan-600 hover:scale-[1.02]">
+        Book Appointment
+        <i class="fas fa-arrow-right text-lg"></i>
+       </button>
+<a href="pricing.html" class="text-slate-700 text-[17px] font-bold items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_4px_16px_-2px] box-border caret-transparent gap-x-3 flex justify-center leading-[25.5px] gap-y-3 px-10 py-4 rounded-2xl border border-solid border-slate-200 transition-all duration-300 hover:bg-slate-50 hover:border-slate-300 hover:scale-[1.02]">
+        View Prices
+</a>
+</div>
+
+<!-- Trust Badges - Pill Cards with Red, Yellow, Green -->
+<div class="items-center box-border caret-transparent gap-x-4 flex flex-wrap gap-y-4">
+  <!-- 5-Star Rating Badge - YELLOW -->
+  <div class="items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_4px_16px_-2px] box-border caret-transparent gap-x-3 flex gap-y-3 px-5 py-3 rounded-2xl border border-solid border-slate-100">
+    <i class="fas fa-star text-yellow-500 text-xl"></i>
+    <span class="text-slate-800 text-[15px] font-semibold box-border caret-transparent block leading-5">
+      5-Star Rating
+    </span>
+  </div>
+
+  <!-- GPhC Registered Badge - GREEN -->
+  <div class="items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_4px_16px_-2px] box-border caret-transparent gap-x-3 flex gap-y-3 px-5 py-3 rounded-2xl border border-solid border-slate-100">
+    <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+    <span class="text-slate-800 text-[15px] font-semibold box-border caret-transparent block leading-5">
+      GPhC Registered
+    </span>
+  </div>
+
+  <!-- Same-Day Appointments Badge - RED -->
+  <div class="items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_4px_16px_-2px] box-border caret-transparent gap-x-3 flex gap-y-3 px-5 py-3 rounded-2xl border border-solid border-slate-100">
+    <i class="fas fa-clock text-red-500 text-xl"></i>
+    <span class="text-slate-800 text-[15px] font-semibold box-border caret-transparent block leading-5">
+      Same-Day Appointments
+    </span>
+  </div>
+</div>
+
+</div>
+<div class="relative box-border caret-transparent pl-0 md:pl-10"><div class="absolute bg-[linear-gradient(to_right_top,rgba(6,182,212,0.2),rgba(34,211,238,0.2))] box-border caret-transparent blur-3xl -z-10 rounded-[48px] scale-[1.1px] inset-0"></div>
+<div class="relative backdrop-blur-sm bg-white/60 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(6,182,212,0.15)_0px_30px_60px_-15px] box-border caret-transparent overflow-hidden rounded-[40px] border-4 border-solid border-white/60">
+          <!-- Landscape aspect ratio container -->
+          <div class="relative w-full" style="padding-bottom: 75%; /* 4:3 aspect ratio */">
+            <img alt="Travel Planning Essentials - Passport, Map, Camera" 
+                 src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=900&fit=crop&q=80" 
+                 class="absolute inset-0 box-border caret-transparent w-full h-full object-cover" />
+            <div class="absolute bg-[linear-gradient(to_top,rgba(6,182,212,0.6),rgba(6,182,212,0.1),rgba(0,0,0,0))] box-border caret-transparent inset-0"></div>
+            
+            <!-- Bottom info card -->
+            <div class="absolute box-border caret-transparent bottom-6 inset-x-6">
+              <div class="backdrop-blur-xl bg-white/90 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.15)_0px_20px_40px_-10px] box-border caret-transparent border p-5 rounded-2xl border-solid border-white/40">
+                <div class="items-center box-border caret-transparent flex justify-between mb-3">
+                  <div class="backdrop-blur-md bg-cyan-500/20 box-border caret-transparent border border-cyan-400/30 px-3 py-1.5 rounded-full border-solid">
+                    <p class="text-cyan-700 text-xs font-bold items-center box-border caret-transparent gap-x-2 flex tracking-[1.2px] leading-4 gap-y-2 uppercase">
+                      <i class="fas fa-check-circle text-[10px]"></i>
+                      TRAVEL READY
+                    </p>
+                  </div>
+                  <div class="text-slate-900 text-sm font-semibold box-border caret-transparent leading-5">
+                    Complete Protection
+                  </div>
+                </div>
+                <p class="text-slate-900 text-xl font-bold box-border caret-transparent leading-[28px] mb-2 font-playfair_display">
+                  Travel with
+                  <span class="text-cyan-500 box-border caret-transparent">confidence</span>
+                  to any
+                  <i class="italic box-border caret-transparent">destination</i>
+                </p>
+                <p class="text-slate-700 text-sm box-border caret-transparent leading-5">
+                  Expert advice for every journey.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Top right badge -->
+            <div class="absolute box-border caret-transparent right-6 top-6">
+              <div class="backdrop-blur-xl bg-cyan-400/95 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(6,182,212,0.3)_0px_20px_40px_-10px] box-border caret-transparent p-4 rounded-2xl border-2 border-solid border-white/40">
+                <div class="text-slate-900 text-xs font-bold box-border caret-transparent tracking-[0.6px] leading-4 uppercase mb-1">
+                  Vaccinations
+                </div>
+                <div class="text-slate-900 text-4xl font-bold box-border caret-transparent leading-10 font-playfair_display">
+                  15+
+                </div>
+                <div class="text-slate-800 text-xs font-semibold box-border caret-transparent leading-4 mt-1">
+                  Available • Same Day
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Stats Section - Full Width Row with Red, Yellow, Green -->
+<section class="bg-white box-border caret-transparent py-16 border-t border-solid border-slate-100">
+  <div class="box-border caret-transparent max-w-[1680px] mx-auto px-6 md:px-[60px]">
+    <div class="box-border caret-transparent gap-x-12 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 md:grid-cols-[repeat(3,minmax(0px,1fr))]">
+      <!-- Stat 1 - GREEN -->
+      <div class="box-border caret-transparent text-center">
+        <div class="text-green-600 text-5xl font-bold box-border caret-transparent leading-[1.2] mb-3 font-playfair_display md:text-6xl">
+          5,000+
+        </div>
+        <div class="text-slate-700 text-base font-semibold box-border caret-transparent leading-6 uppercase tracking-[0.5px]">
+          Travelers Protected
+        </div>
+      </div>
+      
+      <!-- Stat 2 - YELLOW -->
+      <div class="box-border caret-transparent text-center">
+        <div class="text-yellow-500 text-5xl font-bold box-border caret-transparent leading-[1.2] mb-3 font-playfair_display md:text-6xl">
+          2 Locations
+        </div>
+        <div class="text-slate-700 text-base font-semibold box-border caret-transparent leading-6 uppercase tracking-[0.5px]">
+          Denton &amp; Bowland
+        </div>
+      </div>
+      
+      <!-- Stat 3 - RED -->
+      <div class="box-border caret-transparent text-center">
+        <div class="text-red-500 text-5xl font-bold box-border caret-transparent leading-[1.2] mb-3 font-playfair_display md:text-6xl">
+          4.9★
+        </div>
+        <div class="text-slate-700 text-base font-semibold box-border caret-transparent leading-6 uppercase tracking-[0.5px]">
+          Google Rating
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50 box-border caret-transparent overflow-hidden py-32"><div class="absolute bg-cyan-200/30 box-border caret-transparent blur-[150px] h-[800px] pointer-events-none w-[800px] rounded-full left-1/4 top-0"></div>
+<div class="absolute bg-yellow-100/40 box-border caret-transparent blur-[120px] h-[600px] pointer-events-none w-[600px] rounded-full right-1/4 bottom-0"></div>
+<div class="relative box-border caret-transparent max-w-[1200px] z-10 mx-auto px-6"><div class="box-border caret-transparent text-center mb-16"><div class="box-border caret-transparent inline-block mb-6"><div class="relative box-border caret-transparent inline-block"><p class="text-cyan-600 text-sm font-bold box-border caret-transparent tracking-[3px] leading-5 uppercase">
+        EXPERT TRAVEL HEALTH ADVICE
+       </p>
+<div class="bg-cyan-500 box-border caret-transparent h-[2px] w-[60px] mt-3 mx-auto rounded-full"></div>
+</div>
+</div>
+<h2 class="text-slate-900 text-4xl font-bold box-border caret-transparent leading-[45px] mb-8 font-playfair_display md:text-6xl md:leading-[60px]">
+      Why Travel Health
+      <br class="text-4xl box-border caret-transparent leading-[45px] md:text-6xl md:leading-[60px]" />
+
+      Matters for
+      <i class="text-4xl italic box-border caret-transparent leading-[45px] md:text-6xl md:leading-[60px]">
+       Every Journey
+      </i>
+</h2>
+<p class="text-slate-600 text-xl font-light box-border caret-transparent leading-[32.5px] max-w-screen-md mx-auto">
+      &quot;With over 20 years protecting UK travelers, our clinical director explains why proper vaccination planning is essential for safe international travel.&quot;
+     </p>
+</div>
+<div class="relative box-border caret-transparent max-w-[1000px] w-full mb-20 mx-auto"><div class="absolute bg-cyan-400/20 box-border caret-transparent blur-3xl opacity-50 rounded-[40px] -inset-4"></div>
+<div class="relative bg-white shadow-[rgba(6,182,212,0.15)_0px_30px_60px_-15px] box-border caret-transparent overflow-hidden pt-[56.25%] rounded-[32px] border-4 border-solid border-cyan-100"><iframe src="https://www.youtube.com/embed/PsRdKm0fIME?controls=0&modestbranding=1&rel=0" title="Travel Health Expert Advice" class="absolute box-border caret-transparent h-full w-full left-0 top-0"></iframe>
+</div>
+</div>
+<div class="box-border caret-transparent gap-x-8 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 pt-16 border-t border-solid border-slate-200 md:grid-cols-[repeat(3,minmax(0px,1fr))]">
+  <!-- NaTHNaC Registered - GREEN -->
+  <div class="items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_10px_30px_-8px] box-border caret-transparent flex flex-col text-center border p-8 rounded-3xl border-solid border-green-100">
+    <div class="text-green-600 items-center bg-green-50 box-border caret-transparent flex h-16 justify-center w-16 mb-6 rounded-2xl">
+      <i class="fas fa-certificate text-2xl"></i>
+    </div>
+    <h4 class="text-slate-900 text-lg font-bold box-border caret-transparent leading-7 mb-2">
+      NaTHNaC Registered
+    </h4>
+    <p class="text-slate-600 font-medium box-border caret-transparent">
+      National Travel Health Network
+    </p>
+  </div>
+  
+  <!-- 20+ Years Experience - RED -->
+  <div class="items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_10px_30px_-8px] box-border caret-transparent flex flex-col text-center border p-8 rounded-3xl border-solid border-red-100">
+    <div class="text-red-500 items-center bg-red-50 box-border caret-transparent flex h-16 justify-center w-16 mb-6 rounded-2xl">
+      <i class="fas fa-user-md text-2xl"></i>
+    </div>
+    <h4 class="text-slate-900 text-lg font-bold box-border caret-transparent leading-7 mb-2">
+      20+ Years Experience
+    </h4>
+    <p class="text-slate-600 font-medium box-border caret-transparent">
+      Travel Medicine Specialist
+    </p>
+  </div>
+  
+  <!-- Yellow Fever Approved - YELLOW -->
+  <div class="items-center bg-white shadow-[rgba(0,0,0,0.08)_0px_10px_30px_-8px] box-border caret-transparent flex flex-col text-center border p-8 rounded-3xl border-solid border-yellow-100">
+    <div class="text-yellow-500 items-center bg-yellow-50 box-border caret-transparent flex h-16 justify-center w-16 mb-6 rounded-2xl">
+      <i class="fas fa-syringe text-2xl"></i>
+    </div>
+    <h4 class="text-slate-900 text-lg font-bold box-border caret-transparent leading-7 mb-2">
+      Yellow Fever Approved
+    </h4>
+    <p class="text-slate-600 font-medium box-border caret-transparent">
+      Official Vaccination Centre
+    </p>
+  </div>
+</div>
+</div>
+</section>
+<section class="relative bg-white box-border caret-transparent overflow-hidden py-32"><div class="absolute bg-cyan-100/20 box-border caret-transparent blur-[120px] h-[600px] pointer-events-none w-[600px] rounded-full left-1/4 top-0"></div>
+<div class="absolute bg-sky-50/30 box-border caret-transparent blur-[100px] h-[500px] pointer-events-none w-[500px] rounded-full right-1/4 bottom-0"></div>
+<div class="absolute text-cyan-600/10 text-[200px] box-border caret-transparent leading-[200px] pointer-events-none left-10 top-20 font-playfair_display">
+    &quot;
+   </div>
+<div class="absolute text-cyan-500/10 text-[200px] box-border caret-transparent leading-[200px] pointer-events-none scale-x-[-1px] scale-y-[-1px] right-10 bottom-20 font-playfair_display">
+    &quot;
+   </div>
+<div class="relative box-border caret-transparent max-w-[1400px] z-10 mx-auto px-6"><div class="box-border caret-transparent text-center mb-20"><div class="box-border caret-transparent inline-block mb-6"><div class="relative box-border caret-transparent inline-block after:accent-auto after:bg-[linear-gradient(90deg,rgb(6,182,212),rgb(6,182,212)_0%,rgba(0,0,0,0)_100%)] after:box-border after:caret-transparent after:text-slate-900 after:block after:text-base after:not-italic after:normal-nums after:font-normal after:h-0.5 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:pointer-events-auto after:absolute after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:left-0 after:-bottom-2 after:font-dm_sans"><p class="text-cyan-500 text-sm font-bold box-border caret-transparent tracking-[3px] leading-5 uppercase">
+        PROTECTED TRAVELERS
+       </p>
+</div>
+</div>
+<h2 class="text-gray-900 text-5xl font-bold box-border caret-transparent leading-[60px] mb-8 font-playfair_display md:text-7xl md:leading-[72px]">
+      Real Stories,
+      <span class="text-transparent text-5xl bg-clip-text bg-[linear-gradient(to_right,rgb(6,182,212),rgb(34,211,238))] box-border leading-[60px] md:text-7xl md:leading-[72px]">
+       Safe Journeys
+      </span>
+</h2>
+<p class="text-slate-600 text-xl font-light box-border caret-transparent leading-[32.5px] max-w-screen-md mx-auto md:text-2xl md:leading-8">
+      Real clients. Safe travels. Expert vaccination advice that works.
+     </p>
+</div>
+<div class="box-border caret-transparent gap-x-6 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-6 mb-16 md:grid-cols-[repeat(12,minmax(0px,1fr))]"><div class="relative bg-[linear-gradient(to_right_bottom,rgb(255,255,255),rgba(224,242,254,0.3),rgb(255,255,255))] shadow-[rgba(6,182,212,0.08)_0px_20px_60px_0px] box-border caret-transparent col-end-auto col-start-auto border-gray-100 overflow-hidden p-10 rounded-[32px] border-2 border-solid md:col-end-[span_7] md:col-start-[span_7] md:p-12"><div class="absolute text-white text-xs font-bold items-center bg-cyan-500 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.1)_0px_10px_15px_-3px,rgba(0,0,0,0.1)_0px_4px_6px_-4px] box-border caret-transparent gap-x-2 flex leading-4 gap-y-2 px-4 py-2 rounded-full right-6 top-6"><i class="font-black box-border caret-transparent block leading-3 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-white before:text-xs before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-3 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+
+       VERIFIED CLIENT
+      </div>
+<div class="relative box-border caret-transparent z-10"><div class="items-center box-border caret-transparent gap-x-1 flex gap-y-1 mb-8"><i class="text-cyan-500 text-2xl font-black box-border caret-transparent block leading-8 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-2xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-8 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-2xl font-black box-border caret-transparent block leading-8 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-2xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-8 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-2xl font-black box-border caret-transparent block leading-8 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-2xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-8 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-2xl font-black box-border caret-transparent block leading-8 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-2xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-8 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-2xl font-black box-border caret-transparent block leading-8 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-2xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-8 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+</div>
+<blockquote class="text-gray-800 text-2xl italic box-border caret-transparent leading-[39px] mb-10 font-playfair_display md:text-3xl md:leading-9">
+        &quot;Traveling to Tanzania for safari - got
+        <span class="text-cyan-600 text-2xl not-italic font-bold box-border caret-transparent leading-[39px] md:text-3xl md:leading-9">
+         all vaccinations sorted
+        </span>
+
+        in one appointment. Professional, thorough, and
+        <span class="text-cyan-600 text-2xl not-italic font-bold box-border caret-transparent leading-[39px] md:text-3xl md:leading-9">
+         put my mind at ease
+        </span>
+
+        .&quot;
+       </blockquote>
+<div class="items-center box-border caret-transparent gap-x-6 flex gap-y-6"><div class="text-white text-3xl font-bold items-center bg-[linear-gradient(to_right_bottom,rgb(6,182,212),rgb(34,211,238))] shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.1)_0px_20px_25px_-5px,rgba(0,0,0,0.1)_0px_8px_10px_-6px] box-border caret-transparent flex h-20 justify-center leading-9 w-20 rounded-full">
+         RM
+        </div>
+<div class="box-border caret-transparent"><h4 class="text-gray-900 text-2xl font-bold box-border caret-transparent leading-8 mb-1">
+          Robert M.
+         </h4>
+<p class="text-cyan-500 font-semibold box-border caret-transparent">
+          Tanzania Safari Trip
+         </p>
+</div>
+</div>
+<div class="box-border caret-transparent gap-x-4 grid grid-cols-[repeat(3,minmax(0px,1fr))] gap-y-4 border-gray-200 mt-8 pt-8 border-t border-solid"><div class="box-border caret-transparent text-center"><div class="text-cyan-600 text-4xl font-bold box-border caret-transparent leading-10 mb-1 font-playfair_display">
+          8
+         </div>
+<div class="text-slate-600 text-sm font-semibold box-border caret-transparent leading-5">
+          Vaccinations
+         </div>
+</div>
+<div class="box-border caret-transparent text-center"><div class="text-cyan-600 text-4xl font-bold box-border caret-transparent leading-10 mb-1 font-playfair_display">
+          ✓
+         </div>
+<div class="text-slate-600 text-sm font-semibold box-border caret-transparent leading-5">
+          Yellow Fever
+         </div>
+</div>
+<div class="box-border caret-transparent text-center"><div class="text-cyan-600 text-4xl font-bold box-border caret-transparent leading-10 mb-1 font-playfair_display">
+          ✓
+         </div>
+<div class="text-slate-600 text-sm font-semibold box-border caret-transparent leading-5">
+          Malaria Advice
+         </div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative bg-[linear-gradient(to_right_bottom,rgb(255,255,255),rgba(240,253,244,0.2),rgb(255,255,255))] shadow-[rgba(6,182,212,0.08)_0px_20px_60px_0px] box-border caret-transparent col-end-auto col-start-auto border-gray-100 overflow-hidden p-8 rounded-[32px] border-2 border-solid md:col-end-[span_5] md:col-start-[span_5]"><div class="absolute text-white text-xs font-bold items-center bg-cyan-600 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.1)_0px_10px_15px_-3px,rgba(0,0,0,0.1)_0px_4px_6px_-4px] box-border caret-transparent gap-x-1.5 flex leading-4 gap-y-1.5 px-3 py-1.5 rounded-full right-4 top-4"><i class="font-black box-border caret-transparent block font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-white before:text-xs before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+
+       VERIFIED
+      </div>
+<div class="relative box-border caret-transparent z-10"><div class="items-center box-border caret-transparent gap-x-1 flex gap-y-1 mb-6"><i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+</div>
+<blockquote class="text-gray-800 text-lg italic box-border caret-transparent leading-[29.25px] mb-8 font-playfair_display">
+        &quot;Last-minute trip to India - they
+        <span class="text-cyan-600 not-italic font-bold box-border caret-transparent">
+         fit me in same day
+        </span>
+
+        . Comprehensive advice on food safety and what to avoid. Felt
+        <span class="text-cyan-600 not-italic font-bold box-border caret-transparent">
+         completely prepared
+        </span>
+
+        .&quot;
+       </blockquote>
+<div class="items-center box-border caret-transparent gap-x-4 flex gap-y-4"><div class="text-white text-2xl font-bold items-center bg-[linear-gradient(to_right_bottom,rgb(6,182,212),rgb(14,165,233))] shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.1)_0px_10px_15px_-3px,rgba(0,0,0,0.1)_0px_4px_6px_-4px] box-border caret-transparent flex h-16 justify-center leading-8 w-16 rounded-full">
+         R
+        </div>
+<div class="box-border caret-transparent"><h4 class="text-gray-900 text-xl font-bold box-border caret-transparent leading-7 mb-1">
+          Roshni
+         </h4>
+<p class="text-cyan-600 text-sm font-semibold box-border caret-transparent leading-5">
+          India Business Trip
+         </p>
+</div>
+</div>
+<div class="box-border caret-transparent border-gray-200 mt-6 pt-6 border-t border-solid"><div class="text-sm items-center box-border caret-transparent gap-x-2 flex leading-5 gap-y-2"><i class="text-cyan-500 font-black box-border caret-transparent block leading-[14px] font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-[14px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<span class="text-slate-700 font-medium box-border caret-transparent block">
+          Same Day Service
+         </span>
+</div>
+<div class="text-sm items-center box-border caret-transparent gap-x-2 flex leading-5 gap-y-2 mt-2"><i class="text-cyan-500 font-black box-border caret-transparent block leading-[14px] font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-[14px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<span class="text-slate-700 font-medium box-border caret-transparent block">
+          Travel Health Pack
+         </span>
+</div>
+<div class="text-sm items-center box-border caret-transparent gap-x-2 flex leading-5 gap-y-2 mt-2"><i class="text-cyan-500 font-black box-border caret-transparent block leading-[14px] font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-[14px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<span class="text-slate-700 font-medium box-border caret-transparent block">
+          Expert Guidance
+         </span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative bg-[linear-gradient(to_right_bottom,rgb(255,255,255),rgba(224,242,254,0.2),rgb(255,255,255))] shadow-[rgba(6,182,212,0.08)_0px_20px_60px_0px] box-border caret-transparent col-end-auto col-start-auto border-gray-100 overflow-hidden p-8 rounded-[32px] border-2 border-solid md:col-end-[span_5] md:col-start-[span_5]"><div class="absolute text-white text-xs font-bold items-center bg-cyan-500 shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.1)_0px_10px_15px_-3px,rgba(0,0,0,0.1)_0px_4px_6px_-4px] box-border caret-transparent gap-x-1.5 flex leading-4 gap-y-1.5 px-3 py-1.5 rounded-full right-4 top-4"><i class="font-black box-border caret-transparent block font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-white before:text-xs before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+
+       VERIFIED
+      </div>
+<div class="relative box-border caret-transparent z-10"><div class="items-center box-border caret-transparent gap-x-1 flex gap-y-1 mb-6"><i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-cyan-500 text-xl font-black box-border caret-transparent block leading-7 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-xl before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-7 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+</div>
+<blockquote class="text-gray-800 text-lg italic box-border caret-transparent leading-[29.25px] mb-8 font-playfair_display">
+        &quot;Business travel to
+        <span class="text-cyan-600 not-italic font-bold box-border caret-transparent">
+         multiple countries
+        </span>
+
+        - they created a vaccination schedule that worked around my trips.
+        <span class="text-cyan-600 not-italic font-bold box-border caret-transparent">
+         Brilliant service
+        </span>
+
+        .&quot;
+       </blockquote>
+<div class="items-center box-border caret-transparent gap-x-4 flex gap-y-4"><div class="text-white text-2xl font-bold items-center bg-[linear-gradient(to_right_bottom,rgb(6,182,212),rgb(34,211,238))] shadow-[rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0)_0px_0px_0px_0px,rgba(0,0,0,0.1)_0px_10px_15px_-3px,rgba(0,0,0,0.1)_0px_4px_6px_-4px] box-border caret-transparent flex h-16 justify-center leading-8 w-16 rounded-full">
+         J
+        </div>
+<div class="box-border caret-transparent"><h4 class="text-gray-900 text-xl font-bold box-border caret-transparent leading-7 mb-1">
+          John
+         </h4>
+<p class="text-cyan-500 text-sm font-semibold box-border caret-transparent leading-5">
+          Corporate Traveler
+         </p>
+</div>
+</div>
+<div class="box-border caret-transparent border-gray-200 mt-6 pt-6 border-t border-solid"><div class="text-sm items-center box-border caret-transparent gap-x-2 flex leading-5 gap-y-2"><i class="text-cyan-500 font-black box-border caret-transparent block leading-[14px] font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-[14px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<span class="text-slate-700 font-medium box-border caret-transparent block">
+          Multi-Country Plan
+         </span>
+</div>
+<div class="text-sm items-center box-border caret-transparent gap-x-2 flex leading-5 gap-y-2 mt-2"><i class="text-cyan-500 font-black box-border caret-transparent block leading-[14px] font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-[14px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<span class="text-slate-700 font-medium box-border caret-transparent block">
+          Flexible Appointments
+         </span>
+</div>
+<div class="text-sm items-center box-border caret-transparent gap-x-2 flex leading-5 gap-y-2 mt-2"><i class="text-cyan-500 font-black box-border caret-transparent block leading-[14px] font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-cyan-500 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-[14px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<span class="text-slate-700 font-medium box-border caret-transparent block">
+          Corporate Service
+         </span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative bg-[linear-gradient(to_right_bottom,rgb(6,182,212),rgb(34,211,238))] shadow-[rgba(6,182,212,0.25)_0px_20px_60px_0px] box-border caret-transparent col-end-auto col-start-auto overflow-hidden p-10 rounded-[32px] md:col-end-[span_7] md:col-start-[span_7]"><div class="absolute bg-white/10 box-border caret-transparent blur-3xl h-64 w-64 rounded-full right-0 top-0"></div>
+<div class="relative items-center box-border caret-transparent gap-x-8 flex flex-col justify-between gap-y-8 z-10 md:flex-row"><div class="box-border caret-transparent basis-[0%] grow"><h3 class="text-white text-3xl font-bold box-border caret-transparent leading-[37.5px] mb-4 font-playfair_display md:text-4xl md:leading-10">
+         Join 5,000+ Protected Travelers
+        </h3>
+<p class="text-white/80 text-lg box-border caret-transparent leading-[29.25px]">
+         Expert vaccination advice. Safe journeys. Book your pre-travel consultation today.
+        </p>
+</div>
+<div class="box-border caret-transparent gap-x-4 flex flex-col shrink-0 gap-y-4"><div class="backdrop-blur-md bg-white/10 box-border caret-transparent text-center border px-6 py-4 rounded-2xl border-solid border-white/20"><div class="text-white text-5xl font-bold box-border caret-transparent leading-[48px] mb-1 font-playfair_display">
+          4.9
+         </div>
+<div class="items-center box-border caret-transparent gap-x-1 flex justify-center gap-y-1 mb-2"><i class="text-yellow-300 text-sm font-black box-border caret-transparent block leading-5 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-yellow-300 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-yellow-300 text-sm font-black box-border caret-transparent block leading-5 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-yellow-300 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-yellow-300 text-sm font-black box-border caret-transparent block leading-5 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-yellow-300 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-yellow-300 text-sm font-black box-border caret-transparent block leading-5 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-yellow-300 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+<i class="text-yellow-300 text-sm font-black box-border caret-transparent block leading-5 font-font_awesome_6_free before:accent-auto before:box-border before:caret-transparent before:text-yellow-300 before:text-sm before:not-italic before:normal-nums before:font-black before:tracking-[normal] before:leading-5 before:list-outside before:list-disc before:pointer-events-auto before:text-center before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_free"></i>
+</div>
+<div class="text-white/80 text-sm font-semibold box-border caret-transparent leading-5">
+          Google Rating
+         </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="items-center box-border caret-transparent gap-x-5 flex flex-col justify-center gap-y-5 md:flex-row"><button class="text-white text-[17px] font-bold items-center bg-cyan-500 shadow-[rgba(6,182,212,0.3)_0px_20px_40px_-10px] caret-transparent gap-x-3 flex justify-center leading-[25.5px] gap-y-3 text-center px-12 py-5 rounded-full transition-all duration-300 hover:shadow-[rgba(6,182,212,0.5)_0px_0px_60px_-10px] hover:bg-cyan-600 hover:scale-[1.02]">
+      <i class="fas fa-calendar-check text-xl"></i>
+      Book an Appointment
+     </button>
+</div>
+</div>
+</section>
+<section class="relative text-white bg-slate-900 box-border caret-transparent overflow-hidden py-32 border-t border-solid border-white/10">
+  <div class="absolute bg-cyan-900/30 box-border caret-transparent blur-[120px] h-[600px] pointer-events-none w-[600px] rounded-full left-1/4 top-0"></div>
+  <div class="absolute bg-yellow-900/20 box-border caret-transparent blur-[120px] h-[600px] pointer-events-none w-[600px] rounded-full right-1/4 bottom-0"></div>
+  
+  <div class="relative box-border caret-transparent max-w-[1200px] z-10 mx-auto px-6">
+    <!-- Section Header -->
+    <div class="box-border caret-transparent text-center mb-20">
+      <div class="box-border caret-transparent inline-block mb-6">
+        <div class="relative box-border caret-transparent inline-block after:accent-auto after:bg-[linear-gradient(90deg,rgb(6,182,212),rgb(6,182,212)_0%,rgba(0,0,0,0)_100%)] after:box-border after:caret-transparent after:text-white after:block after:text-base after:not-italic after:normal-nums after:font-normal after:h-0.5 after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:pointer-events-auto after:absolute after:text-center after:indent-[0px] after:normal-case after:visible after:border-separate after:left-0 after:-bottom-2 after:font-dm_sans">
+          <p class="text-cyan-400 text-sm font-bold box-border caret-transparent tracking-[3px] leading-5 uppercase">
+            YOUR TRAVEL PREPARATION
+          </p>
+        </div>
+      </div>
+      <h2 class="text-4xl font-bold box-border caret-transparent leading-[45px] mb-6 font-playfair_display md:text-6xl md:leading-[60px]">
+        Travel Preparation
+        <span class="text-transparent text-4xl bg-clip-text bg-[linear-gradient(to_right,rgb(255,255,255),rgb(148,163,184))] box-border leading-[45px] md:text-6xl md:leading-[60px]">
+          Timeline
+        </span>
+      </h2>
+      <p class="text-slate-300 text-lg font-light box-border caret-transparent leading-[29.25px] max-w-3xl mx-auto">
+        At MNC Travel Clinic, we understand the importance of protecting your health while traveling. That's why we provide a comprehensive travel preparation timeline for each of our patients.
+      </p>
+    </div>
+
+    <!-- Vertical Timeline -->
+    <div class="relative box-border caret-transparent max-w-[900px] mx-auto">
+      <!-- Vertical connecting line -->
+      <div class="absolute bg-gradient-to-b from-green-500 via-yellow-500 to-red-500 box-border caret-transparent w-1 rounded-full left-1/2 transform -translate-x-1/2" style="top: 60px; bottom: 60px;"></div>
+
+      <!-- Timeline Item 1 - 8 Weeks Before (GREEN) -->
+      <div class="relative box-border caret-transparent mb-16">
+        <div class="items-center box-border caret-transparent gap-x-8 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 md:grid-cols-[repeat(2,minmax(0px,1fr))]">
+          <!-- Content Card (Left) -->
+          <div class="bg-white box-border caret-transparent p-8 rounded-2xl shadow-[rgba(0,0,0,0.15)_0px_10px_30px_-8px] border border-solid border-green-100">
+            <h3 class="text-slate-900 text-xl font-bold box-border caret-transparent leading-7 mb-3">
+              Initial consultation at MNC
+            </h3>
+            <p class="text-slate-600 text-base box-border caret-transparent leading-6">
+              Speak with one of our travel health experts to confirm and book in your required vaccinations.
+            </p>
+          </div>
+          <!-- Timeline Marker (Right) -->
+          <div class="flex items-center justify-start md:justify-end">
+            <div class="flex items-center gap-x-4">
+              <div class="text-green-400 items-center bg-green-500/20 box-border caret-transparent flex h-16 justify-center w-16 border-4 border-slate-900 rounded-full border-solid relative z-10">
+                <i class="fas fa-user-md text-2xl"></i>
+              </div>
+              <div class="text-right">
+                <div class="text-green-400 text-2xl font-bold box-border caret-transparent leading-8 font-playfair_display">
+                  8 Weeks
+                </div>
+                <div class="text-slate-400 text-sm font-semibold box-border caret-transparent leading-5">
+                  Before Travel
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Trust Pills -->
-      <div class="flex flex-wrap justify-center gap-4">
-        <div class="inline-flex items-center gap-2 px-6 py-3 glassmorphism text-slate-700 text-sm font-semibold rounded-full shadow-lg shadow-emerald-500/10">
-          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          Yellow Fever Centre
+      <!-- Timeline Item 2 - 6 Weeks Before (YELLOW) -->
+      <div class="relative box-border caret-transparent mb-16">
+        <div class="items-center box-border caret-transparent gap-x-8 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 md:grid-cols-[repeat(2,minmax(0px,1fr))]">
+          <!-- Timeline Marker (Left) -->
+          <div class="flex items-center justify-start order-2 md:order-1 md:justify-end">
+            <div class="flex items-center gap-x-4">
+              <div class="text-right">
+                <div class="text-yellow-400 text-2xl font-bold box-border caret-transparent leading-8 font-playfair_display">
+                  6 Weeks
+                </div>
+                <div class="text-slate-400 text-sm font-semibold box-border caret-transparent leading-5">
+                  Before Travel
+                </div>
+              </div>
+              <div class="text-yellow-400 items-center bg-yellow-500/20 box-border caret-transparent flex h-16 justify-center w-16 border-4 border-slate-900 rounded-full border-solid relative z-10">
+                <i class="fas fa-syringe text-2xl"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Content Card (Right) -->
+          <div class="bg-white box-border caret-transparent p-8 rounded-2xl shadow-[rgba(0,0,0,0.15)_0px_10px_30px_-8px] border border-solid border-yellow-100 order-1 md:order-2">
+            <h3 class="text-slate-900 text-xl font-bold box-border caret-transparent leading-7 mb-3">
+              First vaccinations
+            </h3>
+            <p class="text-slate-600 text-base box-border caret-transparent leading-6">
+              Book in your first vaccinations with our travel health experts.
+            </p>
+          </div>
         </div>
-        <div class="inline-flex items-center gap-2 px-6 py-3 glassmorphism text-slate-700 text-sm font-semibold rounded-full shadow-lg shadow-teal-500/10">
-          <svg class="w-4 h-4 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
-          </svg>
-          Price Match Guarantee
+      </div>
+
+      <!-- Timeline Item 3 - 4 Weeks Before (ORANGE) -->
+      <div class="relative box-border caret-transparent mb-16">
+        <div class="items-center box-border caret-transparent gap-x-8 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 md:grid-cols-[repeat(2,minmax(0px,1fr))]">
+          <!-- Content Card (Left) -->
+          <div class="bg-white box-border caret-transparent p-8 rounded-2xl shadow-[rgba(0,0,0,0.15)_0px_10px_30px_-8px] border border-solid border-orange-100">
+            <h3 class="text-slate-900 text-xl font-bold box-border caret-transparent leading-7 mb-3">
+              Follow-up vaccines if needed
+            </h3>
+            <p class="text-slate-600 text-base box-border caret-transparent leading-6">
+              Sometimes, it is necessary to have follow-up vaccinations 4 weeks prior to you travelling.
+            </p>
+          </div>
+          <!-- Timeline Marker (Right) -->
+          <div class="flex items-center justify-start md:justify-end">
+            <div class="flex items-center gap-x-4">
+              <div class="text-orange-400 items-center bg-orange-500/20 box-border caret-transparent flex h-16 justify-center w-16 border-4 border-slate-900 rounded-full border-solid relative z-10">
+                <i class="fas fa-syringe text-2xl"></i>
+              </div>
+              <div class="text-right">
+                <div class="text-orange-400 text-2xl font-bold box-border caret-transparent leading-8 font-playfair_display">
+                  4 Weeks
+                </div>
+                <div class="text-slate-400 text-sm font-semibold box-border caret-transparent leading-5">
+                  Before Travel
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="inline-flex items-center gap-2 px-6 py-3 glassmorphism text-slate-700 text-sm font-semibold rounded-full shadow-lg shadow-emerald-500/10">
-          <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-          </svg>
-          Denton & Wythenshawe
+      </div>
+
+      <!-- Timeline Item 4 - 2 Weeks Before (RED) -->
+      <div class="relative box-border caret-transparent">
+        <div class="items-center box-border caret-transparent gap-x-8 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 md:grid-cols-[repeat(2,minmax(0px,1fr))]">
+          <!-- Timeline Marker (Left) -->
+          <div class="flex items-center justify-start order-2 md:order-1 md:justify-end">
+            <div class="flex items-center gap-x-4">
+              <div class="text-right">
+                <div class="text-red-400 text-2xl font-bold box-border caret-transparent leading-8 font-playfair_display">
+                  2 Weeks
+                </div>
+                <div class="text-slate-400 text-sm font-semibold box-border caret-transparent leading-5">
+                  Before Travel
+                </div>
+              </div>
+              <div class="text-red-400 items-center bg-red-500/20 box-border caret-transparent flex h-16 justify-center w-16 border-4 border-slate-900 rounded-full border-solid relative z-10">
+                <i class="fas fa-clipboard-check text-2xl"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Content Card (Right) -->
+          <div class="bg-white box-border caret-transparent p-8 rounded-2xl shadow-[rgba(0,0,0,0.15)_0px_10px_30px_-8px] border border-solid border-red-100 order-1 md:order-2">
+            <h3 class="text-slate-900 text-xl font-bold box-border caret-transparent leading-7 mb-3">
+              Final health check and travel medications
+            </h3>
+            <p class="text-slate-600 text-base box-border caret-transparent leading-6">
+              We will give you a final health check 2 weeks prior to your travel along with any medications for altitude sickness, traveler's diarrhea, and other destination-specific needs.
+            </p>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
+</section>
+<section class="bg-white box-border caret-transparent py-32"><div class="box-border caret-transparent max-w-[1400px] mx-auto px-6"><div class="box-border caret-transparent gap-x-16 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-16 md:grid-cols-[repeat(12,minmax(0px,1fr))]"><div class="box-border caret-transparent flex flex-col col-end-auto col-start-auto justify-center md:col-end-[span_5] md:col-start-[span_5]"><div class="box-border caret-transparent mb-6"><div class="relative box-border caret-transparent inline-block"><p class="text-cyan-600 text-sm font-bold box-border caret-transparent tracking-[3px] leading-5 uppercase">
+         TRAVEL HEALTH RISKS
+        </p>
+<div class="bg-cyan-500 box-border caret-transparent h-[2px] w-[60px] mt-3 rounded-full"></div>
 </div>
-
-<!-- How It Works Section -->
-<div class="relative py-24 bg-gradient-to-b from-stone-100 to-white">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
-    
-    <h2 class="text-slate-900 text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">
-      Book in 3 Simple Steps
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-      
-      <!-- Connecting line -->
-      <div class="hidden md:block absolute top-24 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-emerald-200 via-teal-200 to-emerald-200"></div>
-
-      <!-- Step 1 -->
-      <div class="relative glassmorphism rounded-3xl p-10 shadow-xl shadow-emerald-500/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2 transition-all duration-500 float-animation stagger-1">
-        <div class="absolute -top-6 left-10 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-emerald-500/50">
-          1
-        </div>
-        <div class="mb-6 mt-4">
-          <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-slate-900 text-2xl font-bold mb-3">Check Your Destination</h3>
-          <p class="text-slate-600 text-lg leading-relaxed">We'll tell you exactly what you need</p>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="relative glassmorphism rounded-3xl p-10 shadow-xl shadow-teal-500/10 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-2 transition-all duration-500 float-animation stagger-2 md:mt-8">
-        <div class="absolute -top-6 left-10 w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-teal-500/50">
-          2
-        </div>
-        <div class="mb-6 mt-4">
-          <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-slate-900 text-2xl font-bold mb-3">Book Your Slot</h3>
-          <p class="text-slate-600 text-lg leading-relaxed">Same-day appointments available</p>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="relative glassmorphism rounded-3xl p-10 shadow-xl shadow-emerald-500/10 hover:shadow-2xl hover:shadow-emerald-500/20 hover:-translate-y-2 transition-all duration-500 float-animation stagger-3 md:mt-16">
-        <div class="absolute -top-6 left-10 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-emerald-500/50">
-          3
-        </div>
-        <div class="mb-6 mt-4">
-          <div class="w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-slate-900 text-2xl font-bold mb-3">Get Protected</h3>
-          <p class="text-slate-600 text-lg leading-relaxed">Walk out with your vaccines and certificates</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </div>
-
-<!-- Vaccination Categories Section -->
-<div class="relative py-24 bg-white">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-12">
-    
-    <h2 class="text-center mb-12">
-      <span class="text-slate-900 text-5xl md:text-6xl font-bold tracking-tight">Our </span>
-      <span class="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 bg-clip-text text-transparent">Vaccinations</span>
-    </h2>
-
-    <!-- Filter Tabs -->
-    <div class="flex flex-wrap justify-center gap-3 mb-16">
-      <button class="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-        All
-      </button>
-      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
-        Essential Travel
-      </button>
-      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
-        Destination-Specific
-      </button>
-      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
-        Pilgrimage
-      </button>
-      <button class="px-8 py-3 glassmorphism text-slate-700 font-semibold rounded-full hover:bg-white/80 transition-all duration-300">
-        Malaria
-      </button>
-    </div>
-
-    <!-- Vaccine Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Vaccine Card 1 -->
-      <div class="glassmorphism rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
-        <div class="flex items-start justify-between mb-4">
-          <h3 class="text-slate-900 text-2xl font-bold">Yellow Fever</h3>
-          <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">Essential</span>
+<h2 class="text-gray-900 text-4xl font-bold box-border caret-transparent leading-[45px] mb-8 font-playfair_display md:text-5xl md:leading-[48px]">
+       Common Travel Health
+       <br class="text-4xl box-border caret-transparent leading-[45px] md:text-5xl md:leading-[48px]" />
+<i class="text-4xl italic box-border caret-transparent leading-[45px] md:text-5xl md:leading-[48px]">
+        Risks We Protect Against
+       </i>
+</h2>
+<p class="text-slate-600 text-lg box-border caret-transparent leading-[29.25px] mb-10">
+       Understanding destination-specific health risks is crucial. From mosquito-borne diseases to food/water contamination, proper preparation can prevent serious illness abroad.
+      </p>
+<button class="text-cyan-600 text-lg font-bold items-center self-start bg-transparent caret-transparent gap-x-3 flex leading-7 gap-y-3 text-center p-0 hover:text-cyan-700">
+       View All Travel Destinations
+       <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+<div class="box-border caret-transparent gap-x-6 grid col-end-auto col-start-auto grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-6 md:col-end-[span_7] md:col-start-[span_7] md:grid-cols-[repeat(2,minmax(0px,1fr))]"><div class="relative items-center bg-gradient-to-br from-red-50 to-white box-border caret-transparent gap-x-8 flex flex-col col-end-auto col-start-auto gap-y-8 border border-red-100 overflow-hidden p-8 rounded-3xl border-solid md:flex-row md:col-end-[span_2] md:col-start-[span_2] md:p-10"><div class="absolute bg-red-100 box-border caret-transparent h-32 w-32 z-0 -mr-8 -mt-8 rounded-bl-full right-0 top-0"></div>
+<div class="relative box-border caret-transparent basis-[0%] grow z-10"><div class="text-red-600 text-xs font-bold items-center bg-red-100 box-border caret-transparent gap-x-2 inline-flex tracking-[0.3px] leading-4 gap-y-2 uppercase mb-4 px-3 py-1 rounded-full">
+          <i class="fas fa-exclamation-circle"></i>
+         HIGH RISK ZONES
         </div>
-        <div class="mb-6">
-          <div class="text-slate-900 text-4xl font-bold mb-2">£75
+<h3 class="text-gray-900 text-2xl font-bold box-border caret-transparent leading-8 mb-2">
+         Malaria Risk
+        </h3>
+<p class="text-slate-600 box-border caret-transparent">
+         Over 200 million cases annually. Prevention is essential for sub-Saharan Africa and South Asia travel.
+        </p>
+</div>
+<div class="relative box-border caret-transparent shrink-0 z-10"><div class="text-red-600 text-6xl font-bold box-border caret-transparent leading-[60px] font-playfair_display md:text-7xl md:leading-[72px]">
+         90%
+        </div>
+<p class="text-slate-500 text-sm font-medium box-border caret-transparent leading-5 text-center mt-1">
+         Deaths in Africa
+        </p>
+</div>
+</div>
+<div class="bg-gradient-to-br from-yellow-50 to-white box-border caret-transparent flex flex-col h-full justify-between border border-yellow-100 p-8 rounded-3xl border-solid"><div class="text-yellow-600 items-center bg-yellow-100 box-border caret-transparent flex h-12 justify-center w-12 mb-6 rounded-xl">
+        <i class="fas fa-file-medical text-xl"></i>
+</div>
+<div class="box-border caret-transparent"><div class="text-yellow-600 text-xs font-bold items-center bg-yellow-100 box-border caret-transparent gap-x-2 inline-flex tracking-[0.3px] leading-4 gap-y-2 uppercase mb-4 px-3 py-1 rounded-full">
+          <i class="fas fa-certificate"></i>
+         CERTIFICATE REQUIRED
+        </div>
+<h3 class="text-gray-900 text-xl font-bold box-border caret-transparent leading-7 mb-2">
+         Yellow Fever
+        </h3>
+<p class="text-slate-600 text-sm box-border caret-transparent leading-[22.75px]">
+         Mandatory vaccination for 40+ countries. Without certification, you may be denied entry or quarantined.
+        </p>
+</div>
+</div>
+<div class="bg-gradient-to-br from-green-50 to-white box-border caret-transparent flex flex-col h-full justify-between border border-green-100 p-8 rounded-3xl border-solid"><div class="text-green-600 items-center bg-green-100 box-border caret-transparent flex h-12 justify-center w-12 mb-6 rounded-xl">
+        <i class="fas fa-shield-virus text-xl"></i>
+</div>
+<div class="box-border caret-transparent"><div class="text-green-600 text-xs font-bold items-center bg-green-100 box-border caret-transparent gap-x-2 inline-flex tracking-[0.3px] leading-4 gap-y-2 uppercase mb-4 px-3 py-1 rounded-full">
+          <i class="fas fa-globe"></i>
+         COMMON RISK
+        </div>
+<h3 class="text-gray-900 text-xl font-bold box-border caret-transparent leading-7 mb-2">
+         Hepatitis A
+        </h3>
+<p class="text-slate-600 text-sm box-border caret-transparent leading-[22.75px]">
+         Transmitted through contaminated food/water. Vaccination provides 95%+ protection for 10+ years.
+        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-slate-50 box-border caret-transparent py-24"><div class="box-border caret-transparent max-w-[1400px] mx-auto px-6"><div class="box-border caret-transparent text-center mb-16"><div class="box-border caret-transparent inline-block mb-4"><div class="relative box-border caret-transparent inline-block"><p class="text-cyan-600 text-sm font-bold box-border caret-transparent tracking-[2.5px] leading-5 uppercase">
+        TRAVEL HEALTH INSIGHTS
+       </p>
+<div class="bg-cyan-500 box-border caret-transparent h-[2px] w-[60px] mt-3 mx-auto rounded-full"></div>
+</div>
+</div>
+<h2 class="text-gray-900 text-4xl font-bold box-border caret-transparent leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
+      Essential Travel Health Guides
+     </h2>
+<p class="text-slate-600 text-lg box-border caret-transparent leading-7 max-w-2xl mx-auto">
+      Expert advice and destination-specific guidance to keep you safe on your travels.
+     </p>
+</div>
+<div class="box-border caret-transparent gap-x-8 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-8 md:grid-cols-[repeat(3,minmax(0px,1fr))]"><article class="box-border caret-transparent group cursor-pointer"><div class="relative aspect-[4_/_3] shadow-[rgba(6,182,212,0.1)_0px_10px_30px_-8px] box-border caret-transparent overflow-hidden mb-6 rounded-2xl transition-all duration-300 group-hover:shadow-[rgba(6,182,212,0.2)_0px_20px_40px_-10px]"><img alt="Southeast Asia Travel" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop" class="box-border caret-transparent h-full max-w-full object-cover w-full transition-transform duration-300 group-hover:scale-105" />
+<div class="absolute bg-[linear-gradient(to_top,rgba(6,182,212,0.8),rgba(6,182,212,0.2),rgba(0,0,0,0))] box-border caret-transparent inset-0"></div>
+<div class="absolute box-border caret-transparent bottom-6 inset-x-6"><span class="text-white text-xs font-bold bg-cyan-500 box-border caret-transparent inline-block tracking-[0.3px] leading-4 uppercase mb-3 px-3 py-1 rounded-full">
+         Travel Guide
+        </span>
+<h3 class="text-white text-xl font-bold box-border caret-transparent leading-[25px] font-playfair_display">
+         Essential Vaccinations for Southeast Asia Travel
+        </h3>
+</div>
+</div>
+</article>
+<article class="box-border caret-transparent group cursor-pointer"><div class="relative aspect-[4_/_3] shadow-[rgba(6,182,212,0.1)_0px_10px_30px_-8px] box-border caret-transparent overflow-hidden mb-6 rounded-2xl transition-all duration-300 group-hover:shadow-[rgba(6,182,212,0.2)_0px_20px_40px_-10px]"><img alt="Yellow Fever Certificate" src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=600&fit=crop" class="box-border caret-transparent h-full max-w-full object-cover w-full transition-transform duration-300 group-hover:scale-105" />
+<div class="absolute bg-[linear-gradient(to_top,rgba(251,191,36,0.8),rgba(251,191,36,0.2),rgba(0,0,0,0))] box-border caret-transparent inset-0"></div>
+<div class="absolute box-border caret-transparent bottom-6 inset-x-6"><span class="text-white text-xs font-bold bg-yellow-500 box-border caret-transparent inline-block tracking-[0.3px] leading-4 uppercase mb-3 px-3 py-1 rounded-full">
+         Requirements
+        </span>
+<h3 class="text-white text-xl font-bold box-border caret-transparent leading-[25px] font-playfair_display">
+         Yellow Fever: Which Countries Require Certification?
+        </h3>
+</div>
+</div>
+</article>
+<article class="box-border caret-transparent group cursor-pointer"><div class="relative aspect-[4_/_3] shadow-[rgba(6,182,212,0.1)_0px_10px_30px_-8px] box-border caret-transparent overflow-hidden mb-6 rounded-2xl transition-all duration-300 group-hover:shadow-[rgba(6,182,212,0.2)_0px_20px_40px_-10px]"><img alt="Malaria Prevention" src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&h=600&fit=crop" class="box-border caret-transparent h-full max-w-full object-cover w-full transition-transform duration-300 group-hover:scale-105" />
+<div class="absolute bg-[linear-gradient(to_top,rgba(14,165,233,0.8),rgba(14,165,233,0.2),rgba(0,0,0,0))] box-border caret-transparent inset-0"></div>
+<div class="absolute box-border caret-transparent bottom-6 inset-x-6"><span class="text-white text-xs font-bold bg-sky-500 box-border caret-transparent inline-block tracking-[0.3px] leading-4 uppercase mb-3 px-3 py-1 rounded-full">
+         Expert Advice
+        </span>
+<h3 class="text-white text-xl font-bold box-border caret-transparent leading-[25px] font-playfair_display">
+         Malaria Prevention: What Actually Works
+        </h3>
+</div>
+</div>
+</article>
+</div>
+<div class="box-border caret-transparent text-center mt-12"><button class="text-cyan-600 text-lg font-bold items-center bg-transparent caret-transparent gap-x-2 flex justify-center leading-7 gap-y-2 mx-auto p-0 hover:text-cyan-700 transition-colors">
+      Read All Travel Health Guides
+      <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+</div>
+</section>
+<footer class="text-white bg-slate-900 box-border caret-transparent pt-24 pb-12 border-t border-solid border-white/10"><div class="box-border caret-transparent max-w-[1680px] mx-auto px-6 md:px-[60px]"><div class="box-border caret-transparent gap-x-16 grid grid-cols-[repeat(1,minmax(0px,1fr))] gap-y-16 mb-20 md:grid-cols-[repeat(4,minmax(0px,1fr))]"><div class="box-border caret-transparent"><h2 class="text-white text-2xl font-bold box-border caret-transparent tracking-[-0.5px] leading-8 mb-8 font-playfair_display">
+        MNC Travel Clinic
+       </h2>
+<p class="text-slate-400 text-sm font-light box-border caret-transparent leading-[22.75px] max-w-xs">
+       Expert travel health services across Cheshire and South Manchester. Protecting travelers with professional vaccination and health advice.
+      </p>
+</div>
+<div class="box-border caret-transparent"><h4 class="text-xs font-bold box-border caret-transparent tracking-[1.2px] leading-4 opacity-80 uppercase mb-8">
+       Programme
+      </h4>
+<ul class="text-slate-400 text-sm font-medium box-border caret-transparent leading-5 list-none pl-0"><li class="box-border caret-transparent"><a href="#" class="box-border caret-transparent hover:text-white">
+         How it Works
+        </a>
+</li>
+<li class="box-border caret-transparent mt-4"><a href="#" class="box-border caret-transparent hover:text-white">
+         Pricing
+        </a>
+</li>
+<li class="box-border caret-transparent mt-4"><a href="#" class="box-border caret-transparent hover:text-white">
+         Success Stories
+        </a>
+</li>
+</ul>
+</div>
+<div class="box-border caret-transparent"><h4 class="text-xs font-bold box-border caret-transparent tracking-[1.2px] leading-4 opacity-80 uppercase mb-8">
+       Company
+      </h4>
+<ul class="text-slate-400 text-sm font-medium box-border caret-transparent leading-5 list-none pl-0"><li class="box-border caret-transparent"><a href="#" class="box-border caret-transparent hover:text-white">
+         About Graham
+        </a>
+</li>
+<li class="box-border caret-transparent mt-4"><a href="#" class="box-border caret-transparent hover:text-white">
+         Contact
+        </a>
+</li>
+<li class="box-border caret-transparent mt-4"><a href="#" class="box-border caret-transparent hover:text-white">
+         Privacy Policy
+        </a>
+</li>
+</ul>
+</div>
+<div class="box-border caret-transparent"><h4 class="text-xs font-bold box-border caret-transparent tracking-[1.2px] leading-4 opacity-80 uppercase mb-8">
+       Connect
+      </h4>
+<div class="box-border caret-transparent gap-x-4 flex gap-y-4"><a href="#" class="text-slate-400 items-center bg-white/10 box-border caret-transparent flex h-12 justify-center w-12 border rounded-full border-solid border-white/10 hover:text-white hover:bg-purple-950 hover:border-purple-950"><i class="box-border caret-transparent block leading-4 font-font_awesome_6_brands before:accent-auto before:box-border before:caret-transparent before:text-slate-400 before:text-base before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+<a href="#" class="text-slate-400 items-center bg-white/10 box-border caret-transparent flex h-12 justify-center w-12 border rounded-full border-solid border-white/10 hover:text-white hover:bg-purple-950 hover:border-purple-950"><i class="box-border caret-transparent block leading-4 font-font_awesome_6_brands before:accent-auto before:box-border before:caret-transparent before:text-slate-400 before:text-base before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+<a href="#" class="text-slate-400 items-center bg-white/10 box-border caret-transparent flex h-12 justify-center w-12 border rounded-full border-solid border-white/10 hover:text-white hover:bg-purple-950 hover:border-purple-950"><i class="box-border caret-transparent block leading-4 font-font_awesome_6_brands before:accent-auto before:box-border before:caret-transparent before:text-slate-400 before:text-base before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-4 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-font_awesome_6_brands"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="text-slate-500 text-sm font-medium box-border caret-transparent leading-5 text-center pt-10 border-t border-solid border-white/10">
+     © 2025 ProLongevity. All rights reserved.
+    </div>
+</div>
+</footer>
+</body>
+
+</html>
